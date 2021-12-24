@@ -1,12 +1,15 @@
 <?php
-$host 	= 'localhost';
-$user = "root";
-$pass = "";
-$db   = "esoman";
 
-$koneksi = mysqli_connect($host,$user,$pass,$db);
+error_reporting(0);
 
-if (!$koneksi) {
-	die("Koneksi gagal:".mysqli_connect_error());
-}
+//Database Configuration
+$db_name        = "MYSQL_DATABASE";
+$host           = "db";
+$username       = "MYSQL_USER";
+$password       = "MYSQL_PASSWORD";
+
+//make connection to database
+$koneksi           = mysqli_connect($host,$username,$password,$db_name) or die("Database connection error!");
+
+
 ?>
